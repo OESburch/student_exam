@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="sample" ng-controller="AppCtrl">
+  <head>
+    <title ng-bind="pageTitle"></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- font awesome from BootstrapCDN -->
+    <link href="vendor/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="vendor/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="app.css">
+    <link rel="stylesheet" type="text/css" href="home/home.css">
+    <link rel="stylesheet" type="text/css" href="signup/signup.css">
+    <link rel="stylesheet" type="text/css" href="login/login.css">
+    <link rel="stylesheet" type="text/css" href="regexam/regexam.css">
+    <link rel="stylesheet" type="text/css" href="mathexam/mathexam.css">
+    <link rel="stylesheet" type="text/css" href="engexam/engexam.css">
+    <link rel="stylesheet" type="text/css" href="resexam/resexam.css">
+
+    
+    <script type="text/javascript" src="vendor/angularjs/angular.js"></script>
+    <script type="text/javascript" src="vendor/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="vendor/a0-angular-storage/dist/angular-storage.js" type="text/javascript"> </script>
+    <script src="vendor/angular-jwt/dist/angular-jwt.js" type="text/javascript"> </script>
+
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="resexam/resexam.js"></script>
+    <script type="text/javascript" src="regexam/regexam.js"></script>
+    <script type="text/javascript" src="mathexam/mathexam.js"></script>
+    <script type="text/javascript" src="engexam/engexam.js"></script>
+    <script type="text/javascript" src="viewexam/viewexam.js"></script>
+    <script type="text/javascript" src="home/home.js"></script>
+    <script type="text/javascript" src="login/login.js"></script>
+    <script type="text/javascript" src="signup/signup.js"></script>
+    <script>
+    
+    </script>
+  </head>
+  <body>
+    <div class="container" ui-view></div>
+  </body>
+</html>

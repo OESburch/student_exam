@@ -1,0 +1,126 @@
+
+<nav class="navbar navbar-default" role="navigation" style="margin-top:30px;">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Exam Web</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+           
+        
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+<div style="margin-top:10px;">
+    <div class="row">
+      <div class="col-sm-4 col-md-3 sidebar">
+        <div class="mini-submenu">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </div>
+        <div class="list-group">
+          <span href="#" class="list-group-item active">
+            Submenu
+         
+          </span>
+          <a href="#" class="list-group-item">
+            <i class="fa fa-comment-o"></i> Register Exam
+          </a>
+          <a href="#" class="list-group-item">
+            <i class="fa fa-search"></i> Register Course
+          </a>
+          <a ui-sref="login" class="list-group-item">
+                <i class="fa fa-search"></i> Logout
+              </a>
+        </div>
+      </div>
+      <div class="col-md-9" style="height:700px;">
+          <div class="portlet light bordered">
+              <div class="portlet-title">
+                  
+                  
+              </div>
+              <div class="portlet-body form">
+                  <form role="form">
+                      <div class="form-body">
+                          <div class="form-group">
+                              <label>Exam Type</label>
+                              <div class="mt-radio-inline">
+                                  <label class="mt-radio">
+                                      <input type="radio" name="optionsRadios" id="optionsRadios4" value="math" ng-model="exam.type" checked=""> Math
+                                      <span></span>
+                                  </label>
+                                  <label class="mt-radio">
+                                      <input type="radio" name="optionsRadios" id="optionsRadios5" value="english" ng-model="exam.type"> English
+                                      <span></span>
+                                  </label>
+
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label>Exam Questions</label>
+                              <div class="input-group col-md-12">
+                                  <span class="input-group-addon">
+                                      <i class="fa fa-question"></i>
+                                  </span>
+                                  <input type="text" class="form-control" placeholder="Input Exam Question" ng-model="exam.question"> </div>
+                          </div>
+                          
+                          <div class="form-group">
+                              <label >Exam answer1</label>
+                              <div class="input-group col-md-12">
+                                  <input type="text" class="form-control" id="exampleInputPassword1" ng-model="exam.answer1">
+
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label>Exam answer2</label>
+                              <div class="input-group col-md-12">
+                                  <input type="text" class="form-control" id="exampleInputPassword1" ng-model="exam.answer2">
+
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label>Exam answer3</label>
+                              <div class="input-group col-md-12" >
+                                  <input type="text" class="form-control" id="exampleInputPassword1" ng-model="exam.answer3">
+                                 
+                              </div>
+                          </div>
+                          <div class="form-group">
+                              <label>Exam answer4</label>
+                              <div class="input-group col-md-12">
+                                  <input type="text" class="form-control" id="exampleInputPassword1" ng-model="exam.answer4">
+                                
+                              </div>
+                          </div>
+                          <div class="form-group">
+                            <label>Correct Answer Number</label>
+                            <div class="input-group col-md-1">
+                                <input type="text" class="form-control" id="exampleInputPassword1" ng-model="exam.correctNum">
+                              
+                            </div>
+                        </div>
+                          
+                          
+                      </div>
+                      <div class="form-actions">
+                          <button type="submit" class="btn blue" ng-click="exam_register()">Register</button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>

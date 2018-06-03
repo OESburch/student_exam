@@ -1,0 +1,91 @@
+<nav class="navbar navbar-default" role="navigation" style="margin-top:30px;">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Exam Web</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<div style="margin-top:10px;">
+  <div class="row">
+    <div class="col-sm-4 col-md-3 sidebar">
+      <div class="mini-submenu">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </div>
+      <div class="list-group">
+        <span href="#" class="list-group-item active">
+          Submenu
+        </span>
+        <a ui-sref="mathexam" class="list-group-item">
+          <i class="fa fa-comment-o"></i> Math Exam
+        </a>
+        <a ui-sref="engexam" class="list-group-item" style="background:#ececec;">
+          <i class="fa fa-comment-o"></i> English Exam
+        </a>
+        <a ui-sref="resexam" class="list-group-item">
+          <i class="fa fa-search"></i> Result
+        </a>
+        <a ui-sref="login" class="list-group-item">
+            <i class="fa fa-search"></i> Logout
+          </a>
+      </div>
+    </div>
+    <div class="col-md-9" style="height:700px;">
+      <div class="portlet light bordered">
+        <div class="portlet-title">
+
+
+        </div>
+        <div class="portlet-body form">
+          <form role="form">
+            <div class="form-body">
+              <div class="form-group">
+                <span style="font-size:29px;">English Question</span>
+              </div>
+              <div ng-repeat="each in student_exam">
+
+                <div class="form-group">
+                  <div class="input-group col-md-12" style="font-size:25px;">
+                    <label>{{$index + 1}}.</label>
+                    {{each.examProblem}}
+                  </div>
+
+                  <div class="form-group">
+                    <div class="input-group col-md-12">
+                      <input type="radio" ng-model="eng_name[$index].name"  value="1"  /> {{each.examAnswer1}}
+                      <input type="radio" ng-model="eng_name[$index].name"  value="2"  /> {{each.examAnswer2}}
+                      <input type="radio" ng-model="eng_name[$index].name"  value="3"  /> {{each.examAnswer3}}
+                      <input type="radio" ng-model="eng_name[$index].name"  value="4"  /> {{each.examAnswer4}}
+                    </div>
+                  </div>
+                  <div style="border-bottom:1px solid #ececec;">
+                  </div>
+                </div>
+                <br>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn blue" ng-click="result_exam()">Result</button>
+              </div>
+          </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
